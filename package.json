@@ -28,6 +28,18 @@
   },
   "packageManager": "pnpm@10.33.4",
   "pnpm": {
+    "supportedArchitectures": {
+      "os": [
+        "current",
+        "linux",
+        "darwin"
+      ],
+      "cpu": [
+        "current",
+        "x64",
+        "arm64"
+      ]
+    },
     "onlyBuiltDependencies": [
       "better-sqlite3"
     ]
