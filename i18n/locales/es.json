@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "role": "Tech Lead & Software Engineer",
+    "headline": "Diseño y lidero sistemas de pagos donde la arquitectura, seguridad y disciplina de entrega son fundamentales.",
+    "description": "Con bases sólidas en ingeniería electrónica y arquitectura de software, construyo sistemas resilientes y de alto impacto para el ecosistema fintech.",
+    "contact": "Hablemos"
+  },
+  "nav": {
+    "about": "Acerca de",
+    "experience": "Experiencia",
+    "articles": "Artículos"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "roles": {
+      "wompi": {
+        "title": "Tech Lead",
+        "company": "Wompi, Ecosistema Bancolombia",
+        "description": "Liderazgo técnico en infraestructura de pagos presenciales, POS, integraciones PCI/EMV y arquitecturas distribuidas orientadas a eventos."
+      },
+      "datak": {
+        "title": "Arquitecto de Software",
+        "company": "Datak",
+        "description": "Diseño e implementación de arquitecturas cloud-native en GCP utilizando Django, FastAPI, Nuxt y App Engine."
+      },
+      "davivienda": {
+        "title": "Líder Técnico",
+        "company": "Davivienda",
+        "description": "Liderazgo en proyectos de infraestructura bancaria, integraciones enterprise, microservicios, GCP y Kubernetes."
+      }
+    }
+  }
+}
