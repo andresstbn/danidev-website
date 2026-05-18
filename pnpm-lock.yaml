@@ -33,6 +33,15 @@ importers:
       '@nuxt/eslint':
         specifier: ^1.15.2
         version: 1.15.2(@typescript-eslint/utils@8.59.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3))(@vue/compiler-sfc@3.5.34)(eslint@10.4.0(jiti@2.7.0))(magicast@0.5.3)(typescript@6.0.3)(vite@7.3.3(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.47.1)(yaml@2.9.0))
+      '@oxc-minify/binding-linux-x64-gnu':
+        specifier: ^0.132.0
+        version: 0.132.0
+      '@oxc-parser/binding-linux-x64-gnu':
+        specifier: ^0.132.0
+        version: 0.132.0
+      '@oxc-transform/binding-linux-x64-gnu':
+        specifier: ^0.132.0
+        version: 0.132.0
       better-sqlite3:
         specifier: ^12.10.0
         version: 12.10.0
@@ -1265,6 +1274,12 @@ packages:
     os: [linux]
     libc: [glibc]
 
+  '@oxc-minify/binding-linux-x64-gnu@0.132.0':
+    resolution: {integrity: sha512-FKxBkYrSAWNF4V6MacAJ/1E2SJobKKQ2CtW6Aq+pLzzEOjgk2SmxnK7I0bATlFH/O70tbTKDzWb17bySGYRcog==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [x64]
+    os: [linux]
+
   '@oxc-minify/binding-linux-x64-musl@0.131.0':
     resolution: {integrity: sha512-CNG3/hPE6MxdLikfLq5l0aZMvJ3W5AP1aoVjzQ1Itokv5sbfBcW0fp6Srn8mB86CyAqO9e7dbffZVOWBDVkhgw==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -1482,6 +1497,12 @@ packages:
     cpu: [x64]
     os: [linux]
     libc: [glibc]
+
+  '@oxc-parser/binding-linux-x64-gnu@0.132.0':
+    resolution: {integrity: sha512-WcEaSNHFk8yz5YFlQQAlhq6jOFmZBB/RKE7uzhyCIf+pF1Lmv9gUH4221mle2Gd9iHyWT3ySNph8yZgb1xYdWg==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [x64]
+    os: [linux]
 
   '@oxc-parser/binding-linux-x64-musl@0.112.0':
     resolution: {integrity: sha512-TYqnuKV/p3eOc+N61E0961nA7DC+gaCeJ3+V2LcjJdTwFMdikqWL6uVk1jlrpUCBrozHDATVUKDZYH7r4FQYjQ==}
@@ -1742,6 +1763,12 @@ packages:
     cpu: [x64]
     os: [linux]
     libc: [glibc]
+
+  '@oxc-transform/binding-linux-x64-gnu@0.132.0':
+    resolution: {integrity: sha512-dUtJkDCYndDaxcuiSMyRoSb7sXmTbcJ61rDsUjIakghP6BkKwH57lyHYvSUhT1ZswXWwCjf3ksxlT8nA0iU6ag==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [x64]
+    os: [linux]
 
   '@oxc-transform/binding-linux-x64-musl@0.112.0':
     resolution: {integrity: sha512-ISQoA3pD4cyTGpf9sXXeerH6pL2L6EIpdy6oAy2ttkswyVFDyQNVOVIGIdLZDgbpmqGljxZnWqt/J/N68pQaig==}
@@ -8066,6 +8093,8 @@ snapshots:
   '@oxc-minify/binding-linux-x64-gnu@0.131.0':
     optional: true
 
+  '@oxc-minify/binding-linux-x64-gnu@0.132.0': {}
+
   '@oxc-minify/binding-linux-x64-musl@0.131.0':
     optional: true
 
@@ -8171,6 +8200,8 @@ snapshots:
 
   '@oxc-parser/binding-linux-x64-gnu@0.131.0':
     optional: true
+
+  '@oxc-parser/binding-linux-x64-gnu@0.132.0': {}
 
   '@oxc-parser/binding-linux-x64-musl@0.112.0':
     optional: true
@@ -8304,6 +8335,8 @@ snapshots:
 
   '@oxc-transform/binding-linux-x64-gnu@0.131.0':
     optional: true
+
+  '@oxc-transform/binding-linux-x64-gnu@0.132.0': {}
 
   '@oxc-transform/binding-linux-x64-musl@0.112.0':
     optional: true
