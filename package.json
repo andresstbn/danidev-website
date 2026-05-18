@@ -46,6 +46,11 @@
     },
     "onlyBuiltDependencies": [
       "better-sqlite3"
-    ]
+    ],
+    "overrides": {
+      "oxc-parser": "0.132.0",
+      "oxc-transform": "0.132.0",
+      "oxc-minify": "0.132.0"
+    }
   }
 }
