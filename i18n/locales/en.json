@@ -1,33 +1,132 @@
 {
-  "hero": {
-    "role": "Tech Lead & Software Engineer",
-    "headline": "I design and lead payment systems where architecture, security, and delivery discipline matter.",
-    "description": "With a strong foundation in electronic engineering and software architecture, I build resilient, high-impact systems for the fintech ecosystem.",
-    "contact": "Let's Talk"
-  },
+  "brand": { "role": "Tech Lead, Payments" },
   "nav": {
-    "about": "About",
-    "experience": "Experience",
-    "articles": "Articles"
+    "work": "Work", "expertise": "Expertise", "writing": "Writing", "contact": "Contact"
   },
-  "experience": {
-    "title": "Experience",
-    "roles": {
-      "wompi": {
-        "title": "Tech Lead",
-        "company": "Wompi, Bancolombia Ecosystem",
-        "description": "Leading in-person payment infrastructure, POS, PCI/EMV integrations, and distributed event-driven architectures."
-      },
-      "datak": {
-        "title": "Software Architect",
-        "company": "Datak",
-        "description": "Designed and implemented cloud-native architectures on GCP using Django, FastAPI, Nuxt, and App Engine."
-      },
-      "davivienda": {
-        "title": "Technical Leader",
-        "company": "Davivienda",
-        "description": "Led banking infrastructure projects utilizing GCP, Kubernetes, SOA, and enterprise microservices."
-      }
+  "hero": {
+    "eyebrow": "Tech Lead · Wompi · Bancolombia",
+    "eyebrow2": "Bogotá, CO",
+    "headline": "Engineering the infrastructure that moves {money}, {scale}",
+    "headline_money": "real money",
+    "headline_scale": "reliably\u00a0and\u00a0at scale.",
+    "lede": "I design event-driven payment systems for POS ecosystems — low-latency, fault-tolerant, and built to clear EMV L3 and PCI DSS scrutiny. Currently leading payment infrastructure at Wompi, inside the Bancolombia ecosystem.",
+    "cta1": "View experience",
+    "cta2": "Get in touch"
+  },
+  "about": {
+    "tag": "San Francisco · 2025",
+    "eyebrow": "About · the engineer behind the systems",
+    "title": "Software engineer with one foot in the cloud and one in the silicon.",
+    "p1": "M.Sc. in Software Engineering and a B.Sc. in Electronic Engineering — a combination I lean on whenever a system spans hardware (POS terminals, EMV kernels, Modbus-driven machinery) and cloud-native backends.",
+    "p2": "Based in Bogotá. Currently Tech Lead at Wompi, inside the Bancolombia ecosystem. Previously: banking integrations at Davivienda, cloud-native architecture at Datak, frontend and IoT telemetry at Erictel, and industrial automation at Inmetar.",
+    "p3": "Outside of work — long walks, an espresso routine, and the slow craft of writing about systems engineering.",
+    "m1": "7+ years shipping",
+    "m2": "AWS Cloud Practitioner",
+    "m3": "EN · ES"
+  },
+  "meta": {
+    "focus": "Focus", "focusV": "Payment infrastructure, distributed backends",
+    "stack": "Stack", "stackV": "TypeScript · NestJS · AWS · NuxtJS",
+    "avail": "Availability", "availV": "Selectively · 2026"
+  },
+  "graph": { "live": "live", "idle": "idle" },
+  "status": {
+    "window": "last 24h", "p99": "p99 latency", "tput": "throughput",
+    "queue": "queue depth", "msg": "msgs", "idem": "idempotency · hits",
+    "events": "recent events", "ev1": "SQS consumer scaled · co-bog-1",
+    "ev2": "EMV L3 cert run · processor-B passed",
+    "ev3": "retry budget exceeded · auto-recovered",
+    "ev4": "key rotation · KMS · scoped scope-pci"
+  },
+  "sec": { "work": "Selected work", "expertise": "Expertise" },
+  "work": {
+    "head": "Seven years building production payment, banking and industrial systems.",
+    "headMuted": " Leadership and architecture in regulated environments where reliability is a contractual requirement, not an aspiration."
+  },
+  "time": { "now": "Now", "present": "Present" },
+  "loc": {
+    "remote": "Bogotá, Colombia · Remote",
+    "consult": "External consultant · Remote",
+    "bog": "Bogotá, CO"
+  },
+  "role": {
+    "wompi": {
+      "title": "Tech Lead · Payment Infrastructure",
+      "lede": "Lead the architecture of low-latency, event-driven payment infrastructure orchestrating real-time transaction flows across POS devices, payment processors and distributed backend services.",
+      "b1": "High-throughput payment systems handling real-money transactions — idempotency, fault tolerance, transaction consistency, PCI/EMV compliance.",
+      "b2": "Asynchronous workflows on AWS SQS and microservices: concurrency, retry strategies, transaction finalization and resiliency.",
+      "b3": "End-to-end integrations with processors, EMV kernels, secure key management and payment hardware — including EMV L3 certifications.",
+      "b4": "Defined organization-wide API and domain-model standards for external financial integrations.",
+      "b5": "Mentored cross-functional squads, ran architecture reviews and drove technical decisions for mission-critical payment infrastructure."
+    },
+    "datak": {
+      "title": "Architect & Tech Lead · Cloud-Native ERP",
+      "lede": "Designed a cloud-native architecture on GCP balancing performance, security and cost; led the cross-functional engineering team across backend and frontend.",
+      "b1": "Architectural decisions around App Engine, Cloud SQL, Cloud Storage, Firebase and REST API design.",
+      "b2": "Streamlined delivery workflows — measurable acceleration in feature throughput and quality.",
+      "b3": "Owned technical guidance for the engineering team and on-time delivery to clients."
+    },
+    "erictel2": {
+      "title": "Frontend Software Architect",
+      "lede": "Led the architectural refactor of a field-workforce management platform serving the Brazilian telecommunications market — rewriting legacy views while keeping service continuity.",
+      "b1": "Coordinated with product, UX/UI and the client to migrate critical workflows without downtime.",
+      "b2": "Bridged a legacy Symfony / jQuery stack with a modern Vue 3 application via Webpack federation."
+    },
+    "daviv": {
+      "title": "Tech Lead · Enterprise Banking Integrations",
+      "lede": "Led a squad supervising external software factories and integrating their deliveries into the bank's cloud-native ecosystem on GCP. Worked across loyalty, insurance and rewards platforms.",
+      "b1": "Integrated SOA-oriented services and legacy banking systems with modern microservice architectures.",
+      "b2": "Operated cloud-native financial apps on Kubernetes inside a regulated banking environment.",
+      "b3": "Aligned vendor deliveries with the bank's architectural, security and operational standards."
+    },
+    "erictel1": {
+      "title": "Frontend Web Developer · IoT Telemetry",
+      "lede": "Built from scratch a real-time IoT vehicle-tracking platform — ingesting continuous telemetry from tracking devices and rendering high-frequency location updates without UI degradation."
+    },
+    "inmetar": {
+      "title": "Full-stack Engineer · Industrial Automation",
+      "lede": "Edge-computing solutions bridging software with physical manufacturing — industrial PLCs, Modbus-driven servo machinery and a full-stack ERP ingesting data from the production floor."
     }
+  },
+  "exp": {
+    "head": "A working vocabulary for distributed systems, payment infrastructure and the operational realities of running them."
+  },
+  "sk": {
+    "eng": { "t": "Engineering" },
+    "arch": {
+      "t": "Architecture",
+      "1": "Event-driven systems",
+      "2": "Microservices · modular monoliths",
+      "3": "Domain-driven design",
+      "4": "Idempotency · transactional consistency",
+      "5": "High availability · resiliency"
+    },
+    "cloud": { "t": "Cloud & Infrastructure" },
+    "fin": {
+      "t": "Fintech & Payments",
+      "4": "Payment processors · gateways",
+      "5": "Secure tokenization · key rotation",
+      "hot": "— current operating context"
+    },
+    "lead": {
+      "t": "Leadership",
+      "1": "Architecture reviews",
+      "2": "Technical mentorship",
+      "3": "Cross-functional alignment",
+      "4": "Engineering standards",
+      "5": "Vendor & factory governance"
+    },
+    "now": {
+      "t": "Current Interests",
+      "1": "Operational reliability under failure",
+      "2": "Latency budgets in payment systems",
+      "3": "Verifiable transaction state",
+      "4": "Compliance as engineering primitive",
+      "5": "Engineering writing & technical judgment",
+      "hot": "— actively writing about"
+    }
+  },
+  "foot": {
+    "colophon": "Set in Geist and Geist Mono. Engineered as a static site. Last revision · 2026.05. Built for clarity, not for ceremony."
   }
 }

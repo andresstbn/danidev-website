@@ -11,20 +11,14 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/lucide": "^1.2.106",
-    "@iconify-json/simple-icons": "^1.2.81",
-    "@nuxt/content": "^3.13.0",
-    "@nuxt/ui": "^4.7.1",
+    "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/i18n": "^10.3.0",
     "@oxc-minify/binding-linux-x64-gnu": "0.132.0",
     "@oxc-parser/binding-linux-x64-gnu": "0.132.0",
     "@oxc-transform/binding-linux-x64-gnu": "0.132.0",
-    "nuxt": "^4.4.5",
-    "tailwindcss": "^4.3.0"
+    "nuxt": "^4.4.5"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^1.15.2",
-    "better-sqlite3": "^12.10.0",
     "eslint": "^10.3.0",
     "oxc-parser": "^0.132.0",
     "typescript": "^6.0.3",

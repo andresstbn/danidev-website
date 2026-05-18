@@ -1,33 +1,132 @@
 {
-  "hero": {
-    "role": "Tech Lead & Software Engineer",
-    "headline": "Diseño y lidero sistemas de pagos donde la arquitectura, seguridad y disciplina de entrega son fundamentales.",
-    "description": "Con bases sólidas en ingeniería electrónica y arquitectura de software, construyo sistemas resilientes y de alto impacto para el ecosistema fintech.",
-    "contact": "Hablemos"
-  },
+  "brand": { "role": "Tech Lead, Pagos" },
   "nav": {
-    "about": "Acerca de",
-    "experience": "Experiencia",
-    "articles": "Artículos"
+    "work": "Experiencia", "expertise": "Especialidad", "writing": "Escritos", "contact": "Contacto"
   },
-  "experience": {
-    "title": "Experiencia",
-    "roles": {
-      "wompi": {
-        "title": "Tech Lead",
-        "company": "Wompi, Ecosistema Bancolombia",
-        "description": "Liderazgo técnico en infraestructura de pagos presenciales, POS, integraciones PCI/EMV y arquitecturas distribuidas orientadas a eventos."
-      },
-      "datak": {
-        "title": "Arquitecto de Software",
-        "company": "Datak",
-        "description": "Diseño e implementación de arquitecturas cloud-native en GCP utilizando Django, FastAPI, Nuxt y App Engine."
-      },
-      "davivienda": {
-        "title": "Líder Técnico",
-        "company": "Davivienda",
-        "description": "Liderazgo en proyectos de infraestructura bancaria, integraciones enterprise, microservicios, GCP y Kubernetes."
-      }
+  "hero": {
+    "eyebrow": "Tech Lead · Wompi · Bancolombia",
+    "eyebrow2": "Bogotá, CO",
+    "headline": "Diseño la infraestructura por la que se mueve {money}, {scale}",
+    "headline_money": "dinero real",
+    "headline_scale": "de forma confiable\u00a0y a escala.",
+    "lede": "Diseño sistemas de pago event-driven para ecosistemas POS — baja latencia, tolerantes a fallos y preparados para EMV L3 y PCI DSS. Actualmente lidero la infraestructura de pagos en Wompi, dentro del ecosistema Bancolombia.",
+    "cta1": "Ver experiencia",
+    "cta2": "Contactar"
+  },
+  "about": {
+    "tag": "San Francisco · 2025",
+    "eyebrow": "Acerca · la persona detrás de los sistemas",
+    "title": "Ingeniero de software con un pie en la nube y otro en el silicio.",
+    "p1": "M.Sc. en Ingeniería de Software e Ingeniero Electrónico de formación — una combinación en la que me apoyo cuando un sistema cruza hardware (terminales POS, kernels EMV, maquinaria por Modbus) y backends cloud-native.",
+    "p2": "Radicado en Bogotá. Actualmente Tech Lead en Wompi, dentro del ecosistema Bancolombia. Antes: integraciones bancarias en Davivienda, arquitectura cloud-native en Datak, frontend y telemetría IoT en Erictel, y automatización industrial en Inmetar.",
+    "p3": "Fuera del trabajo — caminatas largas, una rutina de espresso y el oficio lento de escribir sobre ingeniería de sistemas.",
+    "m1": "7+ años entregando",
+    "m2": "AWS Cloud Practitioner",
+    "m3": "EN · ES"
+  },
+  "meta": {
+    "focus": "Foco", "focusV": "Infraestructura de pagos, backends distribuidos",
+    "stack": "Stack", "stackV": "TypeScript · NestJS · AWS · NuxtJS",
+    "avail": "Disponibilidad", "availV": "Selectiva · 2026"
+  },
+  "graph": { "live": "activo", "idle": "inactivo" },
+  "status": {
+    "window": "últimas 24h", "p99": "latencia p99", "tput": "rendimiento",
+    "queue": "profundidad de cola", "msg": "msgs", "idem": "idempotencia · aciertos",
+    "events": "eventos recientes", "ev1": "Consumidor SQS escalado · co-bog-1",
+    "ev2": "Run de certificación EMV L3 · procesador-B aprobó",
+    "ev3": "Presupuesto de reintentos excedido · auto-recuperado",
+    "ev4": "Rotación de llaves · KMS · alcance scope-pci"
+  },
+  "sec": { "work": "Experiencia seleccionada", "expertise": "Especialidad" },
+  "work": {
+    "head": "Siete años construyendo sistemas de pago, banca e industria en producción.",
+    "headMuted": " Liderazgo y arquitectura en entornos regulados donde la confiabilidad es un requisito contractual, no una aspiración."
+  },
+  "time": { "now": "Actual", "present": "Presente" },
+  "loc": {
+    "remote": "Bogotá, Colombia · Remoto",
+    "consult": "Consultor externo · Remoto",
+    "bog": "Bogotá, CO"
+  },
+  "role": {
+    "wompi": {
+      "title": "Tech Lead · Infraestructura de pagos",
+      "lede": "Lidero la arquitectura de infraestructura de pagos event-driven y baja latencia, orquestando flujos transaccionales en tiempo real entre dispositivos POS, procesadores y servicios backend distribuidos.",
+      "b1": "Sistemas de alta concurrencia manejando dinero real — idempotencia, tolerancia a fallos, consistencia transaccional, cumplimiento PCI/EMV.",
+      "b2": "Flujos asíncronos sobre AWS SQS y microservicios: concurrencia, estrategias de reintento, finalización transaccional y resiliencia.",
+      "b3": "Integraciones end-to-end con procesadores, kernels EMV, gestión de llaves y hardware de pago — incluidas certificaciones EMV L3.",
+      "b4": "Definí estándares de API y modelo de dominio a nivel organización para integraciones financieras externas.",
+      "b5": "Mentoría a squads cross-funcionales, revisiones de arquitectura y decisiones técnicas en infraestructura crítica."
+    },
+    "datak": {
+      "title": "Arquitecto & Tech Lead · ERP Cloud-Native",
+      "lede": "Diseñé una arquitectura cloud-native en GCP equilibrando rendimiento, seguridad y costo; lideré el equipo de ingeniería entre backend y frontend.",
+      "b1": "Decisiones arquitectónicas en App Engine, Cloud SQL, Cloud Storage, Firebase y diseño de APIs REST.",
+      "b2": "Optimicé los flujos de entrega — aceleración medible en throughput y calidad.",
+      "b3": "Dirección técnica del equipo y entregas en plazo a clientes."
+    },
+    "erictel2": {
+      "title": "Arquitecto de Software Frontend",
+      "lede": "Lideré el refactor arquitectónico de una plataforma de gestión de personal en campo para el mercado de telecomunicaciones brasileño — reescribiendo vistas legacy sin afectar continuidad.",
+      "b1": "Coordiné con producto, UX/UI y el cliente para migrar flujos críticos sin downtime.",
+      "b2": "Puenteé un stack legacy Symfony / jQuery con una aplicación Vue 3 moderna vía Webpack."
+    },
+    "daviv": {
+      "title": "Tech Lead · Integraciones Bancarias",
+      "lede": "Lideré un squad supervisando fábricas de software externas e integrando sus entregables al ecosistema cloud-native del banco en GCP. Loyalty, seguros y plataformas de recompensas.",
+      "b1": "Integré servicios SOA y sistemas bancarios legacy con arquitecturas modernas de microservicios.",
+      "b2": "Operé aplicaciones financieras cloud-native sobre Kubernetes en entorno regulado.",
+      "b3": "Alineé entregables de vendors con estándares arquitectónicos, de seguridad y operación del banco."
+    },
+    "erictel1": {
+      "title": "Frontend Web · Telemetría IoT",
+      "lede": "Construí desde cero una plataforma IoT de rastreo vehicular en tiempo real — ingestando telemetría continua y renderizando actualizaciones de alta frecuencia sin degradar la UI."
+    },
+    "inmetar": {
+      "title": "Full-stack · Automatización Industrial",
+      "lede": "Soluciones de edge computing entre software y manufactura física — PLCs industriales, maquinaria servo-controlada vía Modbus y un ERP full-stack ingestando datos de la planta."
     }
+  },
+  "exp": {
+    "head": "Un vocabulario operativo para sistemas distribuidos, infraestructura de pagos y las realidades de operarlos."
+  },
+  "sk": {
+    "eng": { "t": "Ingeniería" },
+    "arch": {
+      "t": "Arquitectura",
+      "1": "Sistemas event-driven",
+      "2": "Microservicios · monolitos modulares",
+      "3": "Domain-driven design",
+      "4": "Idempotencia · consistencia transaccional",
+      "5": "Alta disponibilidad · resiliencia"
+    },
+    "cloud": { "t": "Cloud & Infraestructura" },
+    "fin": {
+      "t": "Fintech & Pagos",
+      "4": "Procesadores de pago · gateways",
+      "5": "Tokenización segura · rotación de llaves",
+      "hot": "— contexto operativo actual"
+    },
+    "lead": {
+      "t": "Liderazgo",
+      "1": "Revisiones de arquitectura",
+      "2": "Mentoría técnica",
+      "3": "Alineación cross-funcional",
+      "4": "Estándares de ingeniería",
+      "5": "Gobernanza de vendors"
+    },
+    "now": {
+      "t": "Intereses actuales",
+      "1": "Confiabilidad operativa bajo fallos",
+      "2": "Presupuestos de latencia en pagos",
+      "3": "Estado transaccional verificable",
+      "4": "Cumplimiento como primitiva de ingeniería",
+      "5": "Escritura técnica & criterio de ingeniería",
+      "hot": "— escribiendo activamente"
+    }
+  },
+  "foot": {
+    "colophon": "Compuesto en Geist y Geist Mono. Sitio estático. Última revisión · 2026.05. Construido por claridad, no por ceremonia."
   }
 }
