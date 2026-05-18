@@ -15,7 +15,7 @@ body {
 body::before {
   content: '';
   position: fixed; inset: 0;
-  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.022) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, var(--dot) 1px, transparent 0);
   background-size: 32px 32px;
   pointer-events: none;
   z-index: 0;
@@ -25,7 +25,7 @@ body::after {
   content:'';
   position: fixed; top:-300px; right:-200px; width:800px; height:800px;
   background: radial-gradient(closest-side, var(--accent-soft), transparent 70%);
-  pointer-events:none; z-index:0; opacity:.7;
+  pointer-events:none; z-index:0; opacity:var(--halo-opacity);
 }
 
 main, nav, footer { position: relative; z-index: 1; }
@@ -43,8 +43,8 @@ a { color: inherit; text-decoration: none; }
   transition: border-color .15s, background .15s, color .15s, transform .15s;
 }
 .btn:hover { border-color: var(--border-strong); background: rgba(255,255,255,0.05); }
-.btn.primary { background: var(--text-1); color: #0a0a0c; border-color: var(--text-1); }
-.btn.primary:hover { background: #fff; }
+.btn.primary { background: var(--btn-primary-bg); color: var(--btn-primary-fg); border-color: var(--btn-primary-bg); }
+.btn.primary:hover { background: var(--btn-primary-hover-bg); border-color: var(--btn-primary-hover-bg); }
 .btn.ghost { background: transparent; }
 .btn .arrow { transition: transform .15s; }
 .btn:hover .arrow { transform: translateX(2px); }

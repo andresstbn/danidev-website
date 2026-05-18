@@ -30,7 +30,7 @@ const { t } = useI18n()
   position: relative;
   transition: background .25s;
 }
-.role:hover { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.012) 30%, transparent); }
+.role:hover { background: linear-gradient(90deg, transparent, var(--row-hi) 30%, transparent); }
 .role:first-child { border-top: 0; padding-top: 0; }
 .role .when {
   font-family: var(--font-mono); font-size: 11px; color: var(--text-3);

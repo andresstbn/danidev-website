@@ -40,9 +40,9 @@ const { t } = useI18n()
   border: 1px solid var(--border-strong);
   background: var(--bg-2);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.05),
-    0 30px 60px -20px rgba(0,0,0,0.55),
-    0 0 0 8px rgba(255,255,255,0.012);
+    inset 0 1px 0 var(--card-hi),
+    var(--shadow-card),
+    0 0 0 8px var(--row-hi);
 }
 .portrait img {
   width: 100%; height: 100%; object-fit: cover; display: block;
@@ -56,6 +56,11 @@ const { t } = useI18n()
     radial-gradient(120% 80% at 50% 0%, transparent 50%, rgba(9,9,11,0.35) 100%),
     linear-gradient(180deg, transparent 65%, rgba(9,9,11,0.45));
 }
+[data-theme="light"] .portrait::after {
+  background:
+    radial-gradient(120% 80% at 50% 0%, transparent 50%, rgba(250,250,250,0.20) 100%),
+    linear-gradient(180deg, transparent 65%, rgba(250,250,250,0.30));
+}
 .portrait .tag {
   position: absolute; left: 10px; bottom: 10px; z-index: 1;
   font-family: var(--font-mono); font-size: 10px; color: var(--text-2);
@@ -64,6 +69,11 @@ const { t } = useI18n()
   background: rgba(9,9,11,0.55);
   backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255,255,255,0.06);
+}
+[data-theme="light"] .portrait .tag {
+  background: rgba(255,255,255,0.72);
+  color: var(--text-2);
+  border-color: rgba(0,0,0,0.08);
 }
 .about .body .eyebrow { margin-bottom: 18px; display: flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 11px; color: var(--text-3); letter-spacing: 0.06em;}
 .about .body .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }

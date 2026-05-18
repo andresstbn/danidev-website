@@ -5,7 +5,7 @@
   },
   "hero": {
     "eyebrow": "Tech Lead · Wompi · Bancolombia",
-    "eyebrow2": "Bogotá, CO",
+    "eyebrow2": "Colombia",
     "headline": "Engineering the infrastructure that moves {money}, {scale}",
     "headline_money": "real money",
     "headline_scale": "reliably\u00a0and\u00a0at scale.",
@@ -18,8 +18,8 @@
     "eyebrow": "About · the engineer behind the systems",
     "title": "Software engineer with one foot in the cloud and one in the silicon.",
     "p1": "M.Sc. in Software Engineering and a B.Sc. in Electronic Engineering — a combination I lean on whenever a system spans hardware (POS terminals, EMV kernels, Modbus-driven machinery) and cloud-native backends.",
-    "p2": "Based in Bogotá. Currently Tech Lead at Wompi, inside the Bancolombia ecosystem. Previously: banking integrations at Davivienda, cloud-native architecture at Datak, frontend and IoT telemetry at Erictel, and industrial automation at Inmetar.",
-    "p3": "Outside of work — long walks, an espresso routine, and the slow craft of writing about systems engineering.",
+    "p2": "Based in Colombia. Currently Tech Lead at Wompi, inside the Bancolombia ecosystem. Previously: banking integrations at Davivienda, cloud-native architecture at Datak, frontend and IoT telemetry at Erictel, and industrial automation at Inmetar.",
+    "p3": "Outside of work — long walks, an espresso routine, and the occasional post about systems engineering.",
     "m1": "7+ years shipping",
     "m2": "AWS Cloud Practitioner",
     "m3": "EN · ES"
@@ -40,14 +40,14 @@
   },
   "sec": { "work": "Selected work", "expertise": "Expertise" },
   "work": {
-    "head": "Seven years building production payment, banking and industrial systems.",
+    "head": "Seven years as a software engineer — two leading production payment infrastructure, one in enterprise banking integrations.",
     "headMuted": " Leadership and architecture in regulated environments where reliability is a contractual requirement, not an aspiration."
   },
   "time": { "now": "Now", "present": "Present" },
   "loc": {
-    "remote": "Bogotá, Colombia · Remote",
+    "remote": "Colombia · Remote",
     "consult": "External consultant · Remote",
-    "bog": "Bogotá, CO"
+    "bog": "Colombia"
   },
   "role": {
     "wompi": {
@@ -123,7 +123,7 @@
       "3": "Verifiable transaction state",
       "4": "Compliance as engineering primitive",
       "5": "Engineering writing & technical judgment",
-      "hot": "— actively writing about"
+      "hot": "— occasional posts"
     }
   },
   "foot": {

@@ -1,64 +1,69 @@
-# Nuxt Starter Template
+# danidev-website
 
-[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+Personal website of Daniel A. Esteban — Tech Lead specializing in payment infrastructure and distributed systems.
 
-Use this template to get started with [Nuxt UI](https://ui.nuxt.com) quickly.
+Built as a static, bilingual (EN/ES) site with a dark theme and a minimal footprint.
 
-- [Live demo](https://starter-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/docs/getting-started/installation/nuxt)
+## Stack
 
-<a href="https://starter-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png">
-    <img alt="Nuxt Starter Template" src="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png" width="830" height="466">
-  </picture>
-</a>
+| Layer | Choice |
+|---|---|
+| Framework | [Nuxt 4](https://nuxt.com) |
+| i18n | [@nuxtjs/i18n](https://i18n.nuxtjs.org) — `en` / `es`, browser-language detection |
+| Fonts | [Geist & Geist Mono](https://vercel.com/font) via `@nuxtjs/google-fonts` |
+| Images | `@nuxt/image` |
+| Styling | Vanilla CSS with design tokens (`tokens.css`) |
+| Package manager | [pnpm](https://pnpm.io) |
+| Deployment | Docker · self-hosted via [Coolify](https://coolify.io) |
 
-> The starter template for Vue is on https://github.com/nuxt-ui-templates/starter-vue.
+## Project structure
 
-## Quick Start
-
-```bash [Terminal]
-npm create nuxt@latest -- -t ui
+```
+app/
+  assets/css/     # Design tokens, base styles, component CSS
+  components/     # Hero, About, Experience, Expertise sections
+  composables/    # useAccent — dynamic accent-color composable
+  pages/          # index.vue (prerendered)
+i18n/
+  locales/
+    en.json       # English strings
+    es.json       # Spanish strings
+public/           # Static assets
+articles/         # Writing / notes (local markdown)
+Dockerfile        # Production container
+nuxt.config.ts
 ```
 
-## Deploy your own
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=starter&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fstarter&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fstarter-dark.png&demo-url=https%3A%2F%2Fstarter-template.nuxt.dev%2F&demo-title=Nuxt%20Starter%20Template&demo-description=A%20minimal%20template%20to%20get%20started%20with%20Nuxt%20UI.)
-
-## Setup
-
-Make sure to install the dependencies:
+## Local development
 
 ```bash
 pnpm install
+pnpm dev          # http://localhost:3000
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-pnpm dev
-```
-
-## Production
-
-Build the application for production:
+## Build & preview
 
 ```bash
 pnpm build
-```
-
-Locally preview production build:
-
-```bash
 pnpm preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Deployment
 
-## Renovate integration
+The site ships as a Node.js server inside a Docker container and is deployed via Coolify.
 
-Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
+```bash
+docker build -t danidev-website .
+docker run -p 3000:3000 danidev-website
+```
+
+## Localization
+
+Locale files live in `i18n/locales/`. Add or update keys in both `en.json` and `es.json` to keep both languages in sync. The active locale is detected from the browser and persisted in a cookie (`i18n_lang`).
+
+## Linting & type-checking
+
+```bash
+pnpm lint
+pnpm typecheck
+```

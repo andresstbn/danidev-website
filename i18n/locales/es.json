@@ -5,7 +5,7 @@
   },
   "hero": {
     "eyebrow": "Tech Lead · Wompi · Bancolombia",
-    "eyebrow2": "Bogotá, CO",
+    "eyebrow2": "Colombia",
     "headline": "Diseño la infraestructura por la que se mueve {money}, {scale}",
     "headline_money": "dinero real",
     "headline_scale": "de forma confiable\u00a0y a escala.",
@@ -18,8 +18,8 @@
     "eyebrow": "Acerca · la persona detrás de los sistemas",
     "title": "Ingeniero de software con un pie en la nube y otro en el silicio.",
     "p1": "M.Sc. en Ingeniería de Software e Ingeniero Electrónico de formación — una combinación en la que me apoyo cuando un sistema cruza hardware (terminales POS, kernels EMV, maquinaria por Modbus) y backends cloud-native.",
-    "p2": "Radicado en Bogotá. Actualmente Tech Lead en Wompi, dentro del ecosistema Bancolombia. Antes: integraciones bancarias en Davivienda, arquitectura cloud-native en Datak, frontend y telemetría IoT en Erictel, y automatización industrial en Inmetar.",
-    "p3": "Fuera del trabajo — caminatas largas, una rutina de espresso y el oficio lento de escribir sobre ingeniería de sistemas.",
+    "p2": "Radicado en Colombia. Actualmente Tech Lead en Wompi, dentro del ecosistema Bancolombia. Antes: integraciones bancarias en Davivienda, arquitectura cloud-native en Datak, frontend y telemetría IoT en Erictel, y automatización industrial en Inmetar.",
+    "p3": "Fuera del trabajo — caminatas largas, una rutina de espresso y, de vez en cuando, escribir sobre ingeniería de sistemas.",
     "m1": "7+ años entregando",
     "m2": "AWS Cloud Practitioner",
     "m3": "EN · ES"
@@ -40,14 +40,14 @@
   },
   "sec": { "work": "Experiencia seleccionada", "expertise": "Especialidad" },
   "work": {
-    "head": "Siete años construyendo sistemas de pago, banca e industria en producción.",
+    "head": "Siete años como ingeniero de software — dos liderando infraestructura de pagos en producción, uno en integraciones bancarias empresariales.",
     "headMuted": " Liderazgo y arquitectura en entornos regulados donde la confiabilidad es un requisito contractual, no una aspiración."
   },
   "time": { "now": "Actual", "present": "Presente" },
   "loc": {
-    "remote": "Bogotá, Colombia · Remoto",
+    "remote": "Colombia · Remoto",
     "consult": "Consultor externo · Remoto",
-    "bog": "Bogotá, CO"
+    "bog": "Colombia"
   },
   "role": {
     "wompi": {
@@ -123,7 +123,7 @@
       "3": "Estado transaccional verificable",
       "4": "Cumplimiento como primitiva de ingeniería",
       "5": "Escritura técnica & criterio de ingeniería",
-      "hot": "— escribiendo activamente"
+      "hot": "— publicando ocasionalmente"
     }
   },
   "foot": {
