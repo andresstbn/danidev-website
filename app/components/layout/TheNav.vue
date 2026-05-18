@@ -3,7 +3,7 @@ import { useScrollNavState } from '~/composables/useScrollNavState'
 
 const { isScrolled } = useScrollNavState()
 const { t, setLocale, locale } = useI18n()
-const { theme, toggle } = useTheme()
+const { toggle } = useTheme()
 </script>
 
 <template>
@@ -32,11 +32,11 @@ const { theme, toggle } = useTheme()
         <a class="icon-btn hide-mobile" href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.56c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.65H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/></svg>
         </a>
-        <button class="icon-btn" aria-label="Toggle theme" @click="toggle">
-          <svg v-if="theme === 'dark'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <button class="icon-btn theme-btn" aria-label="Toggle theme" @click="toggle">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
           </svg>
-          <svg v-else viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"/>
             <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
             <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
@@ -111,6 +111,11 @@ nav.top .inner {
   transition: color .15s, background .15s;
 }
 .lang-toggle button.active { color: var(--text-1); background: var(--pill-bg-active); }
+
+/* icon swap via CSS — no v-if means no hydration mismatch */
+.icon-sun { display: none; }
+:global([data-theme="light"]) .icon-sun { display: block; }
+:global([data-theme="light"]) .icon-moon { display: none; }
 
 @media (max-width: 880px) {
   nav.top .inner { height: 52px; }

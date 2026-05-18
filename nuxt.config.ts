@@ -33,8 +33,8 @@ export default defineNuxtConfig({
 
   i18n: {
     locales: [
-      { code: 'en', file: 'en.json', name: 'English' },
-      { code: 'es', file: 'es.json', name: 'Español' }
+      { code: 'en', file: 'en.json', name: 'English', language: 'en' },
+      { code: 'es', file: 'es.json', name: 'Español', language: 'es' }
     ],
     defaultLocale: 'en',
     strategy: 'no_prefix',
@@ -42,7 +42,8 @@ export default defineNuxtConfig({
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_lang',
-      redirectOn: 'root'
+      redirectOn: 'root',
+      fallbackLocale: 'en'
     }
   },
 
@@ -56,7 +57,13 @@ export default defineNuxtConfig({
       ],
       htmlAttrs: {
         'data-theme': 'dark'
-      }
+      },
+      script: [
+        {
+          innerHTML: `(function(){try{var q=new URLSearchParams(location.search).get('theme');var t=q||localStorage.getItem('site.theme')||'dark';if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t;}}catch(e){}})();`,
+          tagPosition: 'head'
+        }
+      ]
     }
   }
 })

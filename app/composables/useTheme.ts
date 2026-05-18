@@ -15,9 +15,13 @@ export const useTheme = () => {
 
   const toggle = () => apply(theme.value === 'dark' ? 'light' : 'dark')
 
+  // Sync reactive state from what the pre-paint script already set on the DOM.
+  // Must run in onMounted so it happens after Vue hydration, not during it.
   if (import.meta.client) {
-    const cur = document.documentElement.dataset.theme as Theme | undefined
-    if (cur === 'dark' || cur === 'light') theme.value = cur
+    onMounted(() => {
+      const cur = document.documentElement.dataset.theme as Theme | undefined
+      if (cur && cur !== theme.value) theme.value = cur
+    })
   }
 
   return { theme, setTheme: apply, toggle }

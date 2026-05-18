@@ -15,16 +15,6 @@ useSeoMeta({
   twitterCard: 'summary_large_image'
 })
 
-useHead({
-  script: [{
-    innerHTML: `(function(){try{
-      var q=new URLSearchParams(location.search).get('theme');
-      var t=q||localStorage.getItem('site.theme')||'dark';
-      if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t;}
-    }catch(e){}})();`,
-    tagPosition: 'head'
-  }]
-})
 </script>
 
 <template>
