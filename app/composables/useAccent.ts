@@ -1,20 +1,43 @@
-import { useStorage } from '@vueuse/core'
+type AccentColor = 'indigo' | 'emerald' | 'cyan' | 'teal'
 
-export type AccentColor = 'indigo' | 'emerald' | 'cyan' | 'teal'
+const VALID_ACCENTS: AccentColor[] = ['indigo', 'emerald', 'cyan', 'teal']
 
-export const useAccent = () => {
-  const accent = useStorage<AccentColor>('personal_site_accent', 'indigo')
+export function useAccent() {
+  const accent = useState<AccentColor>('accent', () => 'indigo')
 
-  const setAccent = (color: AccentColor) => {
-    accent.value = color
+  function setAccent(value: AccentColor) {
+    if (!VALID_ACCENTS.includes(value)) return
+    accent.value = value
+    if (import.meta.client) {
+      document.documentElement.dataset.accent = value
+      localStorage.setItem('accent', value)
+    }
   }
 
-  // Effect to apply to documentElement
+  function cycleAccent() {
+    const idx = VALID_ACCENTS.indexOf(accent.value)
+    setAccent(VALID_ACCENTS[(idx + 1) % VALID_ACCENTS.length])
+  }
+
+  // Initialize from localStorage or URL on client
   if (import.meta.client) {
-    watchEffect(() => {
-      document.documentElement.dataset.accent = accent.value
-    })
+    const route = useRoute()
+    const urlAccent = (route.query.accent as string)?.toLowerCase() as AccentColor
+    const stored = localStorage.getItem('accent') as AccentColor | null
+
+    if (urlAccent && VALID_ACCENTS.includes(urlAccent)) {
+      setAccent(urlAccent)
+    } else if (stored && VALID_ACCENTS.includes(stored)) {
+      setAccent(stored)
+    } else {
+      setAccent('indigo')
+    }
   }
 
-  return { accent, setAccent }
+  return {
+    accent: readonly(accent),
+    setAccent,
+    cycleAccent,
+    accents: VALID_ACCENTS
+  }
 }

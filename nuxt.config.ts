@@ -2,14 +2,18 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/i18n',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    '@nuxt/image'
   ],
 
   devtools: {
     enabled: true
   },
 
-  css: ['~/assets/css/main.css'],
+  css: [
+    '~/assets/css/tokens.css',
+    '~/assets/css/base.css'
+  ],
 
   routeRules: {
     '/': { prerender: true }

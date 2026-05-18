@@ -1,8 +1,20 @@
-import { useWindowScroll } from '@vueuse/core'
+export function useScrollNavState() {
+  const scrolled = ref(false)
 
-export const useScrollNavState = () => {
-  const { y } = useWindowScroll()
-  const isScrolled = computed(() => y.value > 8)
+  if (import.meta.client) {
+    const update = () => {
+      scrolled.value = window.scrollY > 8
+    }
 
-  return { isScrolled }
+    onMounted(() => {
+      window.addEventListener('scroll', update, { passive: true })
+      update()
+    })
+
+    onUnmounted(() => {
+      window.removeEventListener('scroll', update)
+    })
+  }
+
+  return { scrolled }
 }
