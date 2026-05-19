@@ -56,10 +56,9 @@ export default defineNuxtConfig({
       ],
       script: [
         {
-          // Reads: ?theme= URL param → cookie → 'dark'.
-          // Runs before any CSS is evaluated so there is no flash.
-          // localStorage migration is handled in useTheme's onMounted.
-          innerHTML: `(function(){try{var q=new URLSearchParams(location.search).get('theme');var c=document.cookie.match(/(?:^|;\\s*)site\\.theme=([^;]+)/);var t=q||(c&&c[1])||'dark';if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t;}}catch(e){}})();`,
+          // Reads: ?theme= URL param → localStorage → 'dark'.
+          // Runs synchronously in <head> before any CSS is evaluated — no flash.
+          innerHTML: `(function(){try{var q=new URLSearchParams(location.search).get('theme');var t=q||localStorage.getItem('site.theme')||'dark';if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t;}}catch(e){}})();`,
           tagPosition: 'head'
         }
       ]
