@@ -114,8 +114,8 @@ nav.top .inner {
 
 /* icon swap via CSS — no v-if means no hydration mismatch */
 .icon-sun { display: none; }
-:global([data-theme="light"]) .icon-sun { display: block; }
-:global([data-theme="light"]) .icon-moon { display: none; }
+:global([data-theme="light"] .icon-sun) { display: block; }
+:global([data-theme="light"] .icon-moon) { display: none; }
 
 @media (max-width: 880px) {
   nav.top .inner { height: 52px; }

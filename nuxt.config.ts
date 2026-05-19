@@ -3,8 +3,16 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/i18n',
     '@nuxtjs/google-fonts',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/color-mode'
   ],
+
+  colorMode: {
+    preference: 'dark',
+    fallback: 'dark',
+    dataValue: 'theme',
+    classSuffix: ''
+  },
 
   devtools: {
     enabled: true
@@ -53,14 +61,6 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'Tech Lead specializing in payment infrastructure, distributed systems, and event-driven architectures.' }
-      ],
-      script: [
-        {
-          // Reads: ?theme= URL param → localStorage → 'dark'.
-          // Runs synchronously in <head> before any CSS is evaluated — no flash.
-          innerHTML: `(function(){try{var q=new URLSearchParams(location.search).get('theme');var t=q||localStorage.getItem('site.theme')||'dark';if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t;}}catch(e){}})();`,
-          tagPosition: 'head'
-        }
       ]
     }
   }
