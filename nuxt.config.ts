@@ -42,7 +42,6 @@ export default defineNuxtConfig({
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_lang',
-      redirectOn: 'root',
       fallbackLocale: 'en'
     }
   },
@@ -55,12 +54,12 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'Tech Lead specializing in payment infrastructure, distributed systems, and event-driven architectures.' }
       ],
-      htmlAttrs: {
-        'data-theme': 'dark'
-      },
       script: [
         {
-          innerHTML: `(function(){try{var q=new URLSearchParams(location.search).get('theme');var t=q||localStorage.getItem('site.theme')||'dark';if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t;}}catch(e){}})();`,
+          // Reads: ?theme= URL param → cookie → 'dark'.
+          // Runs before any CSS is evaluated so there is no flash.
+          // localStorage migration is handled in useTheme's onMounted.
+          innerHTML: `(function(){try{var q=new URLSearchParams(location.search).get('theme');var c=document.cookie.match(/(?:^|;\\s*)site\\.theme=([^;]+)/);var t=q||(c&&c[1])||'dark';if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t;}}catch(e){}})();`,
           tagPosition: 'head'
         }
       ]
